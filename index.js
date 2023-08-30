@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     var day = days[ now.getDay() ];
     var month = months[ now.getMonth() ];
     var date = now.getDate()
-    res.render('index.ejs',{day: day, month: month, date: date,todosd:todosd});
+    res.render('page.ejs',{day: day, month: month, date: date,todosd:todosd});
 });
 
 app.post('/', (req, res) => {
