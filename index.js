@@ -4,6 +4,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine','ejs');
 app.use(express.static('public'));
+const port = 3000;
 
 let todosd = [];
 let todosw = [];
@@ -66,6 +67,6 @@ app.post('/del', (req, res) => {
 
 //running the server
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Example app listening on port 3000!');
 });
