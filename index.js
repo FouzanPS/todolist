@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engine','ejs');
+app.set('view engine','html');
 app.use(express.static('public'));
 
 let todosd = [];
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     var day = days[ now.getDay() ];
     var month = months[ now.getMonth() ];
     var date = now.getDate()
-    res.render('index.ejs',{day: day, month: month, date: date,todosd: todosd});
+    res.render('page.ejs',{day: day, month: month, date: date,todosd:todosd});
 });
 
 app.post('/', (req, res) => {
