@@ -8,7 +8,6 @@ const port = 3000;
 
 let todosd = [];
 let todosw = [];
-// comment testing
 //code for Daily tasks side
 
 app.get('/', (req, res) => {
